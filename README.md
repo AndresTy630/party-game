@@ -1,6 +1,6 @@
 # 🎮 Party Game: Tanques
 
-![Logo del juego](logo.png)
+![No es el logo del juego, ni es mia la imagen es solo de referencia](logo.jpg)
 
 **Party Game: Tanques** es un proyecto desarrollado con el apoyo de herramientas de inteligencia artificial, creado con el objetivo de acompañar y potenciar mi aprendizaje en el uso del motor gráfico **Godot Engine**.
 
