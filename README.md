@@ -1,3 +1,4 @@
+![Uploading Logo.jpg…]()
 # 🎮 Party Game: Tanques
 
 ![No es el logo del juego, ni es mia la imagen es solo de referencia](logo.jpg)
