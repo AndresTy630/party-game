@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://byygkff1p4icy"]
+
+[ext_resource type="Script" uid="uid://c1qob4brrjmgv" path="res://Scripts/caja.gd" id="1_ayuox"]
+[ext_resource type="Texture2D" uid="uid://cryju55paxi3a" path="res://Assets/caja.png" id="1_vdupk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayuox"]
+size = Vector2(49, 50)
+
+[node name="Caja" type="RigidBody2D" unique_id=1579083005]
+gravity_scale = 0.0
+script = ExtResource("1_ayuox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=605000623]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ayuox")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=107843639]
+position = Vector2(0, -2.9802322e-08)
+scale = Vector2(0.09765625, 0.099609375)
+texture = ExtResource("1_vdupk")

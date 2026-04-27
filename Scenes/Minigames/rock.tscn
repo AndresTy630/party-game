@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dmwo1ctymiqga"]
+
+[ext_resource type="Texture2D" uid="uid://bij5jj7ulnnni" path="res://Assets/Roca.png" id="1_52cp5"]
+
+[node name="Rock" type="StaticBody2D" unique_id=1573551199]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1971751895]
+polygon = PackedVector2Array(20, -111, -88, -100, -137, -29, -141, -9, -119, 36, -51, 55, -3, 46, 2, 58, 20, 68, 72, 72, 112, 41, 112, 26, 133, -21, 123, -71)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=657704994]
+texture = ExtResource("1_52cp5")

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bpx2smy1q0pbc"]
+
+[ext_resource type="Script" uid="uid://jau5vt56b168" path="res://Scripts/Bullet.gd" id="1_6rs8k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2fuxg"]
+
+[node name="Bullet" type="Area2D" unique_id=969618558]
+script = ExtResource("1_6rs8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=360200642]
+shape = SubResource("CircleShape2D_2fuxg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=320854499]
+offset_left = -9.0
+offset_top = -9.0
+offset_right = 9.0
+offset_bottom = 9.0
+color = Color(0, 0, 0, 1)

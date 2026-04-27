@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c8345riboi15w"]
+
+[ext_resource type="Script" uid="uid://vhylcn4wwdkt" path="res://Scripts/Tank.gd" id="1_s1i6s"]
+[ext_resource type="Texture2D" uid="uid://cetr6naxgyeja" path="res://Assets/TanqueVerde.png" id="2_t5741"]
+[ext_resource type="AudioStream" uid="uid://dti6xtwkdomb1" path="res://Assets/disparo.mp3" id="3_juu2i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t5741"]
+radius = 24.0
+
+[node name="Tank" type="CharacterBody2D" unique_id=1539463417]
+script = ExtResource("1_s1i6s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733853348]
+shape = SubResource("CircleShape2D_t5741")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1151385786]
+position = Vector2(0.5000006, -6.000001)
+scale = Vector2(0.1550633, 0.14318706)
+texture = ExtResource("2_t5741")
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=2142806728]
+stream = ExtResource("3_juu2i")

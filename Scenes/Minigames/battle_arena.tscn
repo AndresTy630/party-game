@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://diu2ij555u6xl"]
+
+[ext_resource type="Script" uid="uid://c03v3rtqsx5ji" path="res://Scripts/BattleArena.gd" id="1_vny1o"]
+[ext_resource type="PackedScene" uid="uid://c8345riboi15w" path="res://Scenes/Minigames/tank.tscn" id="2_140i4"]
+[ext_resource type="Texture2D" uid="uid://bo1spq7ayusro" path="res://Assets/pisoJuego.png" id="2_vrisl"]
+[ext_resource type="AudioStream" uid="uid://bv66s0dt1emw8" path="res://Assets/TanquesFondoM.mp3" id="3_vrisl"]
+[ext_resource type="PackedScene" uid="uid://dmwo1ctymiqga" path="res://Scenes/Minigames/rock.tscn" id="5_80fa3"]
+[ext_resource type="PackedScene" uid="uid://byygkff1p4icy" path="res://Scenes/Minigames/caja.tscn" id="6_iajnd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80fa3"]
+size = Vector2(1154, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iajnd"]
+size = Vector2(5, 659)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jahmg"]
+size = Vector2(5, 650)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ocym"]
+size = Vector2(1151, 3.375)
+
+[node name="BattleArena" type="Node2D" unique_id=1657984338]
+script = ExtResource("1_vny1o")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1986441628]
+position = Vector2(577.00006, 326.5)
+scale = Vector2(0.91706544, 0.514354)
+texture = ExtResource("2_vrisl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1966550933]
+stream = ExtResource("3_vrisl")
+autoplay = true
+parameters/looping = true
+
+[node name="Tank" parent="." unique_id=1539463417 instance=ExtResource("2_140i4")]
+position = Vector2(168, 122)
+
+[node name="Tank2" parent="." unique_id=758520711 instance=ExtResource("2_140i4")]
+position = Vector2(985, 111)
+
+[node name="Tank3" parent="." unique_id=1708721385 instance=ExtResource("2_140i4")]
+position = Vector2(170, 510)
+
+[node name="Tank4" parent="." unique_id=1046524792 instance=ExtResource("2_140i4")]
+position = Vector2(999, 545)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=682565766]
+
+[node name="P1Label" type="Label" parent="HUD" unique_id=942789161]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 123.0
+offset_bottom = 33.0
+text = "❤❤❤  ●●●●"
+metadata/_edit_use_anchors_ = true
+
+[node name="P2Label" type="Label" parent="HUD" unique_id=827165577]
+offset_left = 1015.0
+offset_top = 20.0
+offset_right = 1128.0
+offset_bottom = 43.0
+text = "❤❤❤  ●●●●"
+metadata/_edit_use_anchors_ = true
+
+[node name="P3Label" type="Label" parent="HUD" unique_id=1472116690]
+offset_left = 8.0
+offset_top = 611.0
+offset_right = 121.0
+offset_bottom = 634.0
+text = "❤❤❤  ●●●●"
+metadata/_edit_use_anchors_ = true
+
+[node name="P4Label" type="Label" parent="HUD" unique_id=953230163]
+offset_left = 1031.0
+offset_top = 601.0
+offset_right = 1144.0
+offset_bottom = 634.0
+text = "❤❤❤  ●●●●"
+metadata/_edit_use_anchors_ = true
+
+[node name="Rock" parent="." unique_id=1573551199 instance=ExtResource("5_80fa3")]
+position = Vector2(221, 331)
+
+[node name="Rock2" parent="." unique_id=298757273 instance=ExtResource("5_80fa3")]
+position = Vector2(921, 338)
+
+[node name="Caja" parent="." unique_id=1579083005 instance=ExtResource("6_iajnd")]
+position = Vector2(553, 97)
+
+[node name="Caja2" parent="." unique_id=170229221 instance=ExtResource("6_iajnd")]
+position = Vector2(674, 302)
+
+[node name="Caja3" parent="." unique_id=739622856 instance=ExtResource("6_iajnd")]
+position = Vector2(562, 502)
+
+[node name="Caja4" parent="." unique_id=378816235 instance=ExtResource("6_iajnd")]
+position = Vector2(554, 400)
+
+[node name="Caja5" parent="." unique_id=894073843 instance=ExtResource("6_iajnd")]
+position = Vector2(440, 305)
+
+[node name="Caja6" parent="." unique_id=1923271336 instance=ExtResource("6_iajnd")]
+position = Vector2(556, 301)
+
+[node name="Caja7" parent="." unique_id=720631413 instance=ExtResource("6_iajnd")]
+position = Vector2(552, 202)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=280965766]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1211313494]
+position = Vector2(575, 2)
+shape = SubResource("RectangleShape2D_80fa3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=572002578]
+position = Vector2(1148.5, 319.5)
+shape = SubResource("RectangleShape2D_iajnd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=977302956]
+position = Vector2(0.5, 324)
+shape = SubResource("RectangleShape2D_jahmg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=1690959707]
+position = Vector2(574.5, 647.6875)
+shape = SubResource("RectangleShape2D_3ocym")
