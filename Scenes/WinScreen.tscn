@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://q2jhb5rrp8b1"]
 
 [ext_resource type="Script" uid="uid://dye7v5adjwhq5" path="res://Scripts/win_screen.gd" id="1_68w7f"]
+[ext_resource type="Texture2D" uid="uid://dy1l70ynaeufg" path="res://Assets/winback.png" id="2_d8xbi"]
 
 [node name="WinScreen" type="Control" unique_id=1561554544]
+z_index = 2
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -11,24 +13,29 @@ script = ExtResource("1_68w7f")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=962632139]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 139.0
-offset_right = 758.0
-offset_bottom = 449.0
+offset_left = 389.0
+offset_top = 32.0
+offset_right = 802.0
+offset_bottom = 603.0
 color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=542703403]
+position = Vector2(594.50006, 319.25006)
+scale = Vector2(0.3896485, 0.35449222)
+texture = ExtResource("2_d8xbi")
 
 [node name="WinLabel" type="Label" parent="." unique_id=470129406]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 246.0
-offset_right = 651.0
-offset_bottom = 269.0
+offset_left = 532.0
+offset_top = 71.0
+offset_right = 664.0
+offset_bottom = 94.0
 text = "¡Jugador 1 GANA!"
 
 [node name="RestartButton" type="Button" parent="." unique_id=243960627]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 325.0
-offset_right = 716.0
-offset_bottom = 384.0
+offset_left = 467.0
+offset_top = 133.0
+offset_right = 731.0
+offset_bottom = 192.0
 text = "VOLVER A JUGAR"

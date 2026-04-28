@@ -20,3 +20,8 @@ texture = ExtResource("2_t5741")
 
 [node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=2142806728]
 stream = ExtResource("3_juu2i")
+
+[node name="ShieldEffect" type="Polygon2D" parent="." unique_id=2068980184]
+visible = false
+color = Color(0.45490196, 0.85882354, 0.8784314, 0.38431373)
+polygon = PackedVector2Array(0, -35, 25, -25, 35, 0, 25, 25, 0, 35, -25, 25, -35, 0, -25, -25, 0, -35)

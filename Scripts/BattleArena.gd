@@ -4,6 +4,12 @@ var tanks = []
 var alive_count = 0
 var hud_labels = []
 
+var airplane_scene = preload("res://Scenes/Minigames/Airplane.tscn")
+var airplane_timer = 10.0
+var airplane_cooldown = 10.0
+var max_supply_boxes = 6
+var from_right = false
+
 var spawn_positions = [
 	Vector2(200, 200),
 	Vector2(1000, 200),
@@ -63,3 +69,21 @@ func on_player_died(player_index):
 				win_screen.winner = tank.player_index + 1
 				get_tree().root.add_child(win_screen)
 				break
+	
+func _process(delta):
+	airplane_timer -= delta
+	if airplane_timer <= 0:
+		var current_boxes = get_tree().get_nodes_in_group("supply_boxes").size()
+		if current_boxes < max_supply_boxes:
+			spawn_airplane()
+			airplane_timer = airplane_cooldown
+		else:
+			airplane_timer = 1.0
+	
+func spawn_airplane():
+	var current_boxes = get_tree().get_nodes_in_group("supply_boxes").size()
+	if current_boxes >= max_supply_boxes:
+		return
+	var airplane = airplane_scene.instantiate()
+	add_child(airplane)
+	airplane.start()

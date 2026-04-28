@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c0fc165avrpmm"]
+
+[ext_resource type="Texture2D" uid="uid://b7u80v8k6115t" path="res://Assets/Avion-Photoroom.png" id="1_3x4by"]
+[ext_resource type="Script" uid="uid://ba4uowh82wqil" path="res://Scripts/airplane.gd" id="1_qvq6g"]
+
+[node name="Airplane" type="Node2D" unique_id=1188125510]
+z_index = 1
+script = ExtResource("1_qvq6g")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=378095822]
+position = Vector2(3.0517578e-05, 1.000061)
+scale = Vector2(0.4984051, 0.51196176)
+texture = ExtResource("1_3x4by")

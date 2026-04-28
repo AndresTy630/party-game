@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5y7d7iibp6hi"]
+
+[ext_resource type="Script" uid="uid://hhi2v7m51168" path="res://Scripts/supply_box.gd" id="1_5y2py"]
+[ext_resource type="Texture2D" uid="uid://0148f18o87l5" path="res://Assets/armamento.png" id="1_yh5lw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y2py"]
+size = Vector2(40, 40)
+
+[node name="SupplyBox" type="Area2D" unique_id=993641859]
+script = ExtResource("1_5y2py")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1119635308]
+shape = SubResource("RectangleShape2D_5y2py")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=2105608753]
+position = Vector2(1.1920929e-07, -1.9073486e-06)
+scale = Vector2(0.08849558, 0.0968523)
+texture = ExtResource("1_yh5lw")
+
+[node name="Label" type="Label" parent="." unique_id=641715608]
+offset_left = -3.0
+offset_top = -44.0
+offset_right = 21.0
+offset_bottom = -21.0
